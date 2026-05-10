@@ -1,383 +1,424 @@
 export default function HERACHomepageDemo() {
-  const logoUrl = "/HERAC-logo.png";
-  const sections = [
+  const coreAreas = [
     {
       title: "Health Economics & HTA",
-      desc: "Evidence-based policy research and health technology assessment for sustainable healthcare systems.",
+      desc: "Generating robust evidence for health technology assessment and resource allocation.",
     },
     {
       title: "AI & Digital Health",
-      desc: "Artificial intelligence, real-world evidence and healthcare intelligence innovation.",
-    },
-    {
-      title: "Research & Publications",
-      desc: "Scientific papers, white papers and strategic healthcare reports.",
-    },
-    {
-      title: "HERAC Academy",
-      desc: "Professional training and international certification programs in HTA and AI healthcare.",
+      desc: "Applying artificial intelligence and data science to advance healthcare decision-making.",
     },
     {
       title: "Policy & Strategy",
-      desc: "Strategic consulting for healthcare systems, hospitals and public health organizations.",
+      desc: "Supporting evidence-informed policy and health system strengthening.",
     },
     {
-      title: "International Partnerships",
-      desc: "Collaborative networks with universities, ministries and global organizations.",
+      title: "Education & Capacity Building",
+      desc: "Developing professional competencies in HTA, HEOR, and health economics.",
+    },
+    {
+      title: "Research & Publications",
+      desc: "Producing high-quality research and knowledge resources for global impact.",
+    },
+    {
+      title: "Partnerships & Collaboration",
+      desc: "Working with global partners to drive sustainable healthcare solutions.",
     },
   ];
 
-  const insights = [
-    "AI-driven HTA in Southeast Asia",
-    "Real-world Evidence Analytics",
-    "Health Economics for Sustainable Healthcare",
+  const partners = [
+    { name: "Novo Nordisk", logo: "/partners/novo-nordisk.png" },
+    { name: "AstraZeneca", logo: "/partners/astrazeneca.png" },
+    { name: "Novartis", logo: "/partners/novartis.png" },
+    { name: "Aguettant", logo: "/partners/aguettant.png" },
+    { name: "Viatris", logo: "/partners/viatris.png" },
+    { name: "Takeda", logo: "/partners/takeda.png" },
+    { name: "URGO", logo: "/partners/urgo.png" },
+    { name: "WHO", logo: "/partners/who.png" },
+    { name: "ISPOR", logo: "/partners/ispor.png" },
+    { name: "HTAi", logo: "/partners/htai.png" },
+  ];
+
+  const publications = [
+    {
+      title: "AI Applications in Health Technology Assessment",
+      type: "Research Article",
+    },
+    {
+      title: "Improving Value-Based Healthcare in Emerging Economies",
+      type: "Policy Brief",
+    },
+    {
+      title: "Cost-of-Illness of Non-Communicable Diseases in Vietnam 2024",
+      type: "Technical Report",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
+    <div className="min-h-screen bg-[#f6f7f7] text-[#0d1f1c] font-sans">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div>
-            <div className="flex items-center gap-4">
+      <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-xl">
+        <div className="mx-auto max-w-7xl px-6 py-5">
+          <div className="flex items-start justify-between">
+            <div className="flex items-center gap-5">
               <img
-                src={logoUrl}
+                src="/HERAC-logo.png"
                 alt="HERAC Logo"
-                className="h-14 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
+            </div>
 
-              <div>
-                <div className="text-2xl font-bold tracking-tight text-green-700">
-                  HERAC
-                </div>
+            <div className="flex flex-col items-end gap-5">
+              <div className="flex items-center gap-5 text-sm text-gray-600">
+                <a href="#" className="hover:text-green-700">Contact</a>
+                
+                <a href="#" className="hover:text-green-700">News</a>
 
-                <div className="text-xs text-gray-500 leading-5">
-                  Health Economics Research and Assessment Center
-                  <br />
-                  Trung tâm Nghiên cứu và Đánh giá Kinh tế Y tế
+                <div className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-sm">
+                  🌐 EN
                 </div>
               </div>
+
+              <nav className="flex items-center gap-8 text-sm font-semibold tracking-wide">
+                <a href="#" className="hover:text-green-700">ABOUT US</a>
+                <a href="#" className="hover:text-green-700">RESEARCH</a>
+                <a href="#" className="hover:text-green-700">AI & INNOVATION</a>
+                <a href="#" className="hover:text-green-700">EDUCATION</a>
+                <a href="#" className="hover:text-green-700">PUBLICATIONS</a>
+                <a href="#" className="hover:text-green-700">PARTNERSHIPS</a>
+                <a href="#" className="hover:text-green-700">INSIGHTS</a>
+              </nav>
             </div>
           </div>
-
-          <div className="flex items-center gap-6">
-            <div className="hidden items-center rounded-full border border-gray-200 bg-white p-1 md:flex">
-              <button className="rounded-full bg-green-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition">
-                EN
-              </button>
-
-              <button className="rounded-full px-4 py-2 text-sm font-semibold text-gray-600 transition hover:text-green-700">
-                VI
-              </button>
-            </div>
-
-            <nav className="hidden gap-8 text-sm font-medium md:flex">
-            <a href="#" className="hover:text-green-700">About</a>
-            <a href="#" className="hover:text-green-700">Research</a>
-            <a href="#" className="hover:text-green-700">AI & Digital Health</a>
-            <a href="#" className="hover:text-green-700">Academy</a>
-            <a href="#" className="hover:text-green-700">Publications</a>
-            <a href="#" className="hover:text-green-700">Partnerships</a>
-          </nav>
-          </div>
-
-          <button className="rounded-2xl bg-green-700 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-105">
-            Contact HERAC
-          </button>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-emerald-50" />
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#eef6f8] via-[#f4fbfc] to-[#e9f4f7]">
+        {/* Animated Network Background */}
+        <div className="absolute inset-0 overflow-hidden opacity-70">
+          <div className="absolute left-[10%] top-[15%] h-3 w-3 animate-pulse rounded-full bg-cyan-400" />
+          <div className="absolute left-[25%] top-[35%] h-2 w-2 animate-pulse rounded-full bg-sky-400" />
+          <div className="absolute left-[42%] top-[18%] h-4 w-4 animate-pulse rounded-full bg-cyan-300" />
+          <div className="absolute left-[58%] top-[42%] h-3 w-3 animate-pulse rounded-full bg-emerald-300" />
+          <div className="absolute left-[72%] top-[22%] h-2 w-2 animate-pulse rounded-full bg-sky-300" />
+          <div className="absolute left-[84%] top-[48%] h-4 w-4 animate-pulse rounded-full bg-cyan-400" />
 
-        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 py-24 lg:grid-cols-2 lg:py-32">
-          <div className="flex flex-col justify-center">
-            <div className="mb-5 inline-flex w-fit items-center rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-medium text-green-700">
-              Science-driven Healthcare Innovation
-            </div>
+          <svg
+            className="absolute inset-0 h-full w-full"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="10%" y1="15%" x2="25%" y2="35%" stroke="#9ed8ea" strokeWidth="1" opacity="0.5" />
+            <line x1="25%" y1="35%" x2="42%" y2="18%" stroke="#9ed8ea" strokeWidth="1" opacity="0.5" />
+            <line x1="42%" y1="18%" x2="58%" y2="42%" stroke="#9ed8ea" strokeWidth="1" opacity="0.5" />
+            <line x1="58%" y1="42%" x2="72%" y2="22%" stroke="#9ed8ea" strokeWidth="1" opacity="0.5" />
+            <line x1="72%" y1="22%" x2="84%" y2="48%" stroke="#9ed8ea" strokeWidth="1" opacity="0.5" />
+          </svg>
 
-            <h1 className="max-w-2xl text-5xl font-bold leading-tight tracking-tight lg:text-6xl">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.7),transparent_70%)]" />
+        </div>
+        <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95),rgba(230,240,240,0.3))]" />
+
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-20 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h1 className="max-w-2xl text-6xl font-bold leading-[1.08] tracking-tight text-[#10352d]">
               Advancing Health Economics, HTA and AI-driven Healthcare Innovation
-              <span className="mt-4 block text-3xl font-semibold text-green-700 lg:text-4xl">
-                Thúc đẩy Kinh tế Y tế, HTA và Đổi mới Y tế dựa trên AI
-              </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
-              HERAC connects science, policy, education and artificial intelligence to support evidence-based healthcare systems and sustainable health innovation in Vietnam and Southeast Asia.
-              <br />
-              <br />
-              HERAC kết nối khoa học, chính sách, giáo dục và trí tuệ nhân tạo nhằm hỗ trợ hệ thống y tế dựa trên bằng chứng và đổi mới y tế bền vững tại Việt Nam và Đông Nam Á.
+            <p className="mt-8 max-w-xl text-xl leading-9 text-gray-700">
+              HERAC is a science-driven organization specializing in Health Economics, Health Technology Assessment (HTA), AI-driven healthcare innovation, policy research and real-world evidence for sustainable healthcare systems.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-2xl bg-green-700 px-6 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-105">
-                Explore Research
+            <div className="mt-10 flex flex-wrap gap-5">
+              <button className="rounded-md bg-green-700 px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-green-800 hover:shadow-xl">
+                EXPLORE OUR RESEARCH
               </button>
 
-              <button className="rounded-2xl border border-gray-300 bg-white px-6 py-4 text-base font-semibold text-gray-800 transition hover:border-green-600 hover:text-green-700">
-                Partner with HERAC
+              <button className="rounded-md border border-gray-300 bg-white px-8 py-4 text-sm font-semibold tracking-wide text-[#0d1f1c] transition-all duration-300 hover:border-green-700 hover:text-green-700">
+                PARTNER WITH US
               </button>
-            </div>
-
-            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-gray-200 pt-8">
-              <div>
-                <div className="text-3xl font-bold text-green-700">120+</div>
-                <div className="mt-2 text-sm text-gray-500">Research Projects</div>
-              </div>
-
-              <div>
-                <div className="text-3xl font-bold text-green-700">30+</div>
-                <div className="mt-2 text-sm text-gray-500">Global Partners</div>
-              </div>
-
-              <div>
-                <div className="text-3xl font-bold text-green-700">5000+</div>
-                <div className="mt-2 text-sm text-gray-500">Professionals Trained</div>
-              </div>
             </div>
           </div>
 
-          {/* Hero Visual */}
-          <div className="relative flex items-center justify-center">
-            <div className="absolute h-96 w-96 rounded-full bg-green-200/40 blur-3xl" />
+          <div className="relative flex justify-end">
+            <div className="absolute right-10 top-10 h-72 w-72 animate-pulse rounded-full bg-cyan-100/60 blur-3xl" />
+            <div className="absolute inset-0 rounded-full bg-cyan-100/40 blur-3xl" />
 
-            <div className="relative w-full rounded-[32px] border border-white/40 bg-white/80 p-8 shadow-2xl backdrop-blur-xl">
-              <div className="mb-8 flex items-center justify-between">
-                <div>
-                  <div className="text-lg font-semibold">HERAC Health Intelligence</div>
-                  <div className="text-sm text-gray-500">
-                    AI-driven evidence ecosystem
-                  </div>
-                </div>
-
-                <div className="rounded-xl bg-green-100 px-3 py-2 text-sm font-semibold text-green-700">
-                  Live Analytics
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-5">
-                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
-                  <div className="text-sm text-gray-500">HTA Assessments</div>
-                  <div className="mt-3 text-3xl font-bold">248</div>
-                </div>
-
-                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
-                  <div className="text-sm text-gray-500">AI Research Models</div>
-                  <div className="mt-3 text-3xl font-bold">42</div>
-                </div>
-
-                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
-                  <div className="text-sm text-gray-500">Healthcare Datasets</div>
-                  <div className="mt-3 text-3xl font-bold">126</div>
-                </div>
-
-                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
-                  <div className="text-sm text-gray-500">Policy Insights</div>
-                  <div className="mt-3 text-3xl font-bold">89</div>
-                </div>
-              </div>
-
-              <div className="mt-8 rounded-2xl bg-gradient-to-r from-green-700 to-emerald-600 p-6 text-white shadow-xl">
-                <div className="text-lg font-semibold">
-                  AI & Health Intelligence Lab
-                </div>
-                <div className="mt-2 text-sm text-green-50">
-                  Integrating AI, real-world evidence and health economics for next-generation healthcare systems.
-                </div>
+            <div className="relative flex h-[520px] w-[520px] items-center justify-center rounded-full border border-white/50 bg-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.08)] backdrop-blur-3xl">
+              <div className="relative h-[430px] w-[430px] overflow-hidden rounded-full bg-[radial-gradient(circle_at_center,#dff7ff,#c6e7f2,#8cb6c5)] opacity-95 shadow-[0_0_120px_rgba(180,220,230,0.9)]">
+                <div className="absolute inset-0 animate-[pulse_8s_ease-in-out_infinite] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.8),transparent_50%)]" />
+                <div className="absolute left-[20%] top-[20%] h-3 w-3 rounded-full bg-white/80" />
+                <div className="absolute left-[50%] top-[30%] h-2 w-2 rounded-full bg-cyan-200" />
+                <div className="absolute left-[70%] top-[55%] h-3 w-3 rounded-full bg-sky-200" />
+                <div className="absolute left-[40%] top-[70%] h-2 w-2 rounded-full bg-white/70" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Ecosystem */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-3xl">
-          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
-            HERAC Ecosystem
+      {/* Trusted */}
+      <section className="bg-white py-10">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-8 px-6 text-gray-500">
+          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-700">
+            PARTNERS AND SPONSORS
           </div>
 
-          <h2 className="mt-4 text-4xl font-bold tracking-tight">
-            Science, Policy, Education and AI in One Integrated Platform
-          </h2>
+          <div className="relative overflow-hidden">
+            <div className="flex w-max animate-[scroll_30s_linear_infinite] items-center gap-6">
+              {[...partners, ...partners].map((partner, idx) => (
+                <div
+                  key={idx}
+                  className="flex h-24 min-w-[180px] items-center justify-center rounded-2xl border border-gray-100 bg-white px-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-12 w-auto object-contain grayscale transition duration-300 hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <style jsx>{`
+              @keyframes scroll {
+                from {
+                  transform: translateX(0);
+                }
+                to {
+                  transform: translateX(-50%);
+                }
+              }
+            `}</style>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Areas */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="flex items-end justify-between">
+          <div>
+            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
+              HERAC ECOSYSTEM
+            </div>
+
+            <h2 className="mt-4 text-5xl font-bold tracking-tight text-[#10352d]">
+              Core Research, Policy and Innovation Areas
+            </h2>
+          </div>
+
+          <button className="text-sm font-semibold tracking-wide text-green-700 transition hover:translate-x-1">
+            VIEW ALL AREAS →
+          </button>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {sections.map((item, idx) => (
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {coreAreas.map((item, idx) => (
             <div
               key={idx}
-              className="group rounded-[28px] border border-gray-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="mb-6 h-14 w-14 rounded-2xl bg-green-50" />
+              <div className="mb-8 h-16 w-16 rounded-2xl border border-green-100 bg-green-50" />
 
-              <h3 className="text-2xl font-semibold tracking-tight group-hover:text-green-700">
+              <h3 className="text-2xl font-bold leading-tight text-[#10352d] group-hover:text-green-700">
                 {item.title}
               </h3>
 
-              <p className="mt-5 leading-7 text-gray-600">
+              <p className="mt-5 leading-8 text-gray-600">
                 {item.desc}
               </p>
+
+              <div className="mt-8 text-lg text-gray-400 transition-all duration-300 group-hover:translate-x-2 group-hover:text-green-700">
+                →
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Featured Research */}
-      <section className="bg-gray-50 py-24">
+      {/* Publications */}
+      <section className="bg-gradient-to-r from-[#042d24] via-[#063b30] to-[#042d24] py-24 text-white">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="grid gap-10 lg:grid-cols-4">
             <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
-                Research & Publications
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-300">
+                RESEARCH HIGHLIGHTS
               </div>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-tight">
-                Featured Scientific Insights
+              <h2 className="mt-5 text-5xl font-bold leading-tight">
+                Latest Publications
               </h2>
+
+              <p className="mt-6 text-lg leading-8 text-green-50/80">
+                Discover our recent studies, reports, and white papers shaping the future of healthcare.
+              </p>
+
+              <button className="mt-10 rounded-md border border-green-400 px-6 py-4 text-sm font-semibold tracking-wide transition hover:bg-green-600">
+                BROWSE ALL PUBLICATIONS
+              </button>
             </div>
 
-            <button className="rounded-2xl border border-gray-300 bg-white px-5 py-3 font-semibold hover:border-green-700 hover:text-green-700">
-              View All Publications
-            </button>
-          </div>
+            <div className="lg:col-span-3 grid gap-6 md:grid-cols-3">
+              {publications.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/15"
+                >
+                  <div className="h-48 bg-gradient-to-br from-cyan-200/20 to-emerald-300/20" />
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
-            {insights.map((title, idx) => (
-              <div
-                key={idx}
-                className="rounded-[28px] bg-white p-8 shadow-sm transition hover:shadow-xl"
-              >
-                <div className="mb-6 text-sm font-semibold text-green-700">
-                  Policy & Research
+                  <div className="p-6">
+                    <div className="mb-3 inline-flex rounded-full bg-green-500/20 px-3 py-1 text-xs font-semibold tracking-wide text-green-200">
+                      NEW
+                    </div>
+
+                    <div className="text-xs uppercase tracking-wide text-green-200/70">
+                      {item.type}
+                    </div>
+
+                    <h3 className="mt-4 text-2xl font-semibold leading-tight">
+                      {item.title}
+                    </h3>
+
+                    <div className="mt-6 text-sm text-green-100/70">
+                      May 2024 · HERAC Publication
+                    </div>
+                  </div>
                 </div>
-
-                <h3 className="text-2xl font-semibold leading-tight">
-                  {title}
-                </h3>
-
-                <p className="mt-5 text-gray-600 leading-7">
-                  Evidence-based analysis and strategic healthcare insights supporting sustainable policy and innovation.
-                </p>
-
-                <div className="mt-8 text-sm font-semibold text-green-700">
-                  Read Research →
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Academy */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
-              HERAC Academy
-            </div>
+      {/* AI Section */}
+      <section className="bg-[#f5f7f7] py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-10 lg:grid-cols-5">
+            <div className="lg:col-span-2">
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
+                AI & INNOVATION
+              </div>
 
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">
-              Professional Education for the AI-era Healthcare Ecosystem
-            </h2>
+              <h2 className="mt-5 text-5xl font-bold leading-tight text-[#10352d]">
+                Shaping the Future with Data and Intelligence
+              </h2>
 
-            <p className="mt-8 text-lg leading-8 text-gray-600">
-              International-level programs in HTA, health economics, AI healthcare, policy analysis and healthcare innovation.
-            </p>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                We harness the power of AI and real-world data to generate actionable insights, improve decision-making, and predict health outcomes.
+              </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-2xl bg-green-700 px-6 py-4 font-semibold text-white shadow-lg hover:scale-105 transition">
-                Explore Programs
-              </button>
-
-              <button className="rounded-2xl border border-gray-300 px-6 py-4 font-semibold hover:border-green-700 hover:text-green-700">
-                International Certification
+              <button className="mt-10 rounded-md border border-gray-300 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:border-green-700 hover:text-green-700">
+                EXPLORE AI LAB
               </button>
             </div>
-          </div>
 
-          <div className="grid gap-6">
-            <div className="rounded-[28px] border border-gray-100 bg-white p-8 shadow-sm">
-              <div className="text-sm font-semibold text-green-700">Foundation</div>
-              <div className="mt-3 text-2xl font-semibold">HTA & HEOR Basics</div>
-            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:col-span-3 xl:grid-cols-4">
+              {[
+                "AI for HTA",
+                "Real-World Evidence",
+                "Predictive Analytics",
+                "Data Governance",
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+                >
+                  <div className="mb-8 h-16 w-16 rounded-2xl border border-green-100 bg-green-50" />
 
-            <div className="rounded-[28px] border border-gray-100 bg-white p-8 shadow-sm">
-              <div className="text-sm font-semibold text-green-700">Professional</div>
-              <div className="mt-3 text-2xl font-semibold">Advanced Health Economics</div>
-            </div>
+                  <h3 className="text-2xl font-semibold leading-tight text-[#10352d]">
+                    {item}
+                  </h3>
 
-            <div className="rounded-[28px] border border-gray-100 bg-gradient-to-r from-green-700 to-emerald-600 p-8 text-white shadow-xl">
-              <div className="text-sm font-semibold text-green-100">AI Programs</div>
-              <div className="mt-3 text-2xl font-semibold">AI in Drug Development & Healthcare</div>
+                  <p className="mt-5 leading-8 text-gray-600">
+                    Building next-generation healthcare intelligence systems through AI and advanced analytics.
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 bg-white py-14">
-        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 lg:flex-row lg:items-start lg:justify-between">
-          <div className="max-w-md">
-            <div className="flex items-center gap-4">
+      <footer className="bg-gradient-to-r from-[#042d24] via-[#05281f] to-[#031d18] py-20 text-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-12 lg:grid-cols-5">
+            <div>
               <img
-                src={logoUrl}
+                src="/HERAC-logo.png"
                 alt="HERAC Logo"
-                className="h-12 w-auto object-contain"
+                className="h-20 w-auto object-contain brightness-200"
               />
 
-              <div className="text-2xl font-bold text-green-700">HERAC</div>
+              <p className="mt-6 leading-8 text-green-50/80">
+                Advancing health economics, HTA and AI-driven innovation for sustainable healthcare systems.
+              </p>
             </div>
 
-            <p className="mt-5 leading-7 text-gray-600">
-              HERAC is a science-driven platform advancing health economics, HTA, AI-driven healthcare innovation and evidence-based policy development.
-            </p>
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-wide text-green-300">
+                EXPLORE
+              </div>
+
+              <div className="mt-5 space-y-4 text-green-50/80">
+                <div>About Us</div>
+                <div>Research</div>
+                <div>AI & Innovation</div>
+                <div>Education</div>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-wide text-green-300">
+                RESOURCES
+              </div>
+
+              <div className="mt-5 space-y-4 text-green-50/80">
+                <div>HTA Resources</div>
+                <div>Training Programs</div>
+                <div>Guidelines & Tools</div>
+                <div>Events</div>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-wide text-green-300">
+                CONNECT
+              </div>
+
+              <div className="mt-5 space-y-4 text-green-50/80">
+                <div>Partner With Us</div>
+                <div>News & Media</div>
+                <div>Contact Us</div>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-wide text-green-300">
+                STAY UPDATED
+              </div>
+
+              <p className="mt-5 leading-7 text-green-50/80">
+                Subscribe to our newsletter for the latest insights.
+              </p>
+
+              <div className="mt-6 flex overflow-hidden rounded-md border border-green-700 bg-white/10 backdrop-blur">
+                <input
+                  type="text"
+                  placeholder="Email address"
+                  className="w-full bg-transparent px-4 py-4 text-white placeholder:text-green-100/50 focus:outline-none"
+                />
+
+                <button className="bg-green-600 px-5 text-white transition hover:bg-green-500">
+                  →
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 text-sm md:grid-cols-4">
-            <div>
-              <div className="font-semibold">Research</div>
-              <div className="mt-4 space-y-3 text-gray-600">
-                <div>HTA</div>
-                <div>HEOR</div>
-                <div>Publications</div>
-              </div>
-            </div>
-
-            <div>
-              <div className="font-semibold">Academy</div>
-              <div className="mt-4 space-y-3 text-gray-600">
-                <div>Programs</div>
-                <div>Certification</div>
-                <div>Executive Training</div>
-              </div>
-            </div>
-
-            <div>
-              <div className="font-semibold">Innovation</div>
-              <div className="mt-4 space-y-3 text-gray-600">
-                <div>AI Lab</div>
-                <div>Health Data</div>
-                <div>Analytics</div>
-              </div>
-            </div>
-
-            <div>
-              <div className="font-semibold">Contact</div>
-              <div className="mt-4 space-y-3 text-gray-600">
-                <div>info@herac.org</div>
-                <div>www.herac.org</div>
-                <div>Hanoi, Vietnam</div>
-              </div>
-            </div>
+          <div className="mt-16 border-t border-white/10 pt-8 text-sm text-green-50/60">
+            © 2026 HERAC – Health Economics Research and Assessment Center. All rights reserved.
           </div>
-        </div>
-
-        <div className="mx-auto mt-14 max-w-7xl border-t border-gray-100 px-6 pt-8 text-sm text-gray-500">
-          💚 HERAC – Science | Integrity | Sustainability
-          <br />
-          💚 HERAC – Khoa Học | Trung Thực | Bền Vững
         </div>
       </footer>
     </div>
