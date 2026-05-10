@@ -5,19 +5,19 @@ export default function HERACHomepageDemo() {
       desc: "Generating robust evidence for health technology assessment and resource allocation.",
     },
     {
-      title: "AI & Digital Health",
-      desc: "Applying artificial intelligence and data science to advance healthcare decision-making.",
+      title: "Health Financing & Policy",
+      desc: "Supporting DRG systems, health insurance policy, hospital costing and sustainable healthcare financing.",
     },
     {
-      title: "Policy & Strategy",
-      desc: "Supporting evidence-informed policy and health system strengthening.",
+      title: "HTA & Reimbursement Policy",
+      desc: "Supporting reimbursement decisions, evidence synthesis and healthcare policy development.",
     },
     {
-      title: "Education & Capacity Building",
-      desc: "Developing professional competencies in HTA, HEOR, and health economics.",
+      title: "Training & Capacity Building",
+      desc: "Developing professional competencies in HTA, health financing, reimbursement systems and healthcare policy analysis.",
     },
     {
-      title: "Research & Publications",
+      title: "Research & Policy Publications",
       desc: "Producing high-quality research and knowledge resources for global impact.",
     },
     {
@@ -39,33 +39,45 @@ export default function HERACHomepageDemo() {
     { name: "HTAi", logo: "/partners/htai.png" },
   ];
 
+  const featuredPrograms = [
+    "Health Technology Assessment (HTA)",
+    "Hospital Management & Quality Improvement",
+    "Health Financing & DRG Systems",
+    "Pharmacoeconomics & Reimbursement",
+    "Medical Device Assessment",
+    "Healthcare Policy Analysis",
+  ];
+
   const publications = [
     {
-      title: "AI Applications in Health Technology Assessment",
-      type: "Research Article",
+      title: "Systematic Review of Cost-effectiveness Studies in Heart Failure Treatment",
+      type: "HTA Research",
     },
     {
-      title: "Improving Value-Based Healthcare in Emerging Economies",
-      type: "Policy Brief",
+      title: "Policy Directions for DRG Implementation in Vietnam",
+      type: "Health Financing Policy",
     },
     {
-      title: "Cost-of-Illness of Non-Communicable Diseases in Vietnam 2024",
-      type: "Technical Report",
+      title: "Economic Burden of Healthcare-associated Infections in Vietnam",
+      type: "Economic Burden Study",
     },
   ];
 
   return (
     <div className="min-h-screen bg-[#f6f7f7] text-[#0d1f1c] font-sans">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/85 shadow-sm backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-6 py-5">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-5">
-              <img
-                src="/HERAC-logo.png"
-                alt="HERAC Logo"
-                className="h-20 w-auto object-contain"
-              />
+              <div className="absolute left-0 top-0 h-32 w-32 rounded-full bg-green-100/40 blur-3xl" />
+              <div className="flex items-center rounded-2xl bg-white/80 px-4 py-3 shadow-sm backdrop-blur">
+                <img
+                  src="/HERAC-logo.png"
+                  alt="HERAC Logo"
+                  className="h-24 w-auto object-contain drop-shadow-sm"
+                />
+              </div>
             </div>
 
             <div className="flex flex-col items-end gap-5">
@@ -82,7 +94,7 @@ export default function HERACHomepageDemo() {
               <nav className="flex items-center gap-8 text-sm font-semibold tracking-wide">
                 <a href="#" className="hover:text-green-700">ABOUT US</a>
                 <a href="#" className="hover:text-green-700">RESEARCH</a>
-                <a href="#" className="hover:text-green-700">AI & INNOVATION</a>
+                <a href="#" className="hover:text-green-700">HEALTH POLICY & HTA</a>
                 <a href="#" className="hover:text-green-700">EDUCATION</a>
                 <a href="#" className="hover:text-green-700">PUBLICATIONS</a>
                 <a href="#" className="hover:text-green-700">PARTNERSHIPS</a>
@@ -122,14 +134,24 @@ export default function HERACHomepageDemo() {
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-20 lg:grid-cols-2 lg:items-center">
           <div>
             <h1 className="max-w-2xl text-6xl font-bold leading-[1.08] tracking-tight text-[#10352d]">
-              Advancing Health Economics, HTA and AI-driven Healthcare Innovation
+              Advancing Health Economics, Health Technology Assessment and Sustainable Healthcare Policy
             </h1>
 
             <p className="mt-8 max-w-xl text-xl leading-9 text-gray-700">
-              HERAC is a science-driven organization specializing in Health Economics, Health Technology Assessment (HTA), AI-driven healthcare innovation, policy research and real-world evidence for sustainable healthcare systems.
+              HERAC is an independent science and technology organization specializing in Health Technology Assessment (HTA), Health Economics, Hospital Management, Health Financing and evidence-based healthcare policy in Vietnam and Southeast Asia. HERAC supports healthcare systems through scientific research, professional training, policy advisory services and international collaboration in pharmaceuticals, medical devices, reimbursement systems and healthcare innovation.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-5">
+              <div className="flex flex-wrap gap-3 pb-2">
+                {featuredPrograms.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-full border border-green-100 bg-white/70 px-4 py-2 text-sm font-medium text-[#18453d] shadow-sm backdrop-blur"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
               <button className="rounded-md bg-green-700 px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-green-800 hover:shadow-xl">
                 EXPLORE OUR RESEARCH
               </button>
@@ -199,11 +221,11 @@ export default function HERACHomepageDemo() {
         <div className="flex items-end justify-between">
           <div>
             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
-              HERAC ECOSYSTEM
+              HERAC RESEARCH & POLICY ECOSYSTEM
             </div>
 
             <h2 className="mt-4 text-5xl font-bold tracking-tight text-[#10352d]">
-              Core Research, Policy and Innovation Areas
+              Core Research, Health Policy and Healthcare Innovation Areas
             </h2>
           </div>
 
@@ -242,11 +264,11 @@ export default function HERACHomepageDemo() {
           <div className="grid gap-10 lg:grid-cols-4">
             <div>
               <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-300">
-                RESEARCH HIGHLIGHTS
+                RESEARCH, POLICY & SCIENTIFIC PUBLICATIONS
               </div>
 
               <h2 className="mt-5 text-5xl font-bold leading-tight">
-                Latest Publications
+                Latest Research, Policy and Scientific Publications
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-green-50/80">
@@ -296,28 +318,28 @@ export default function HERACHomepageDemo() {
           <div className="grid gap-10 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <div className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
-                AI & INNOVATION
+                HEALTH INTELLIGENCE & INNOVATION
               </div>
 
               <h2 className="mt-5 text-5xl font-bold leading-tight text-[#10352d]">
-                Shaping the Future with Data and Intelligence
+                Transforming Healthcare Systems Through Health Intelligence and Evidence-based Policy
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                We harness the power of AI and real-world data to generate actionable insights, improve decision-making, and predict health outcomes.
+                HERAC integrates health intelligence, evidence synthesis, real-world data, policy analytics and HTA methodologies to strengthen healthcare systems, optimize resource allocation and support sustainable health innovation.
               </p>
 
               <button className="mt-10 rounded-md border border-gray-300 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:border-green-700 hover:text-green-700">
-                EXPLORE AI LAB
+                EXPLORE HEALTH INTELLIGENCE
               </button>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:col-span-3 xl:grid-cols-4">
               {[
-                "AI for HTA",
-                "Real-World Evidence",
-                "Predictive Analytics",
-                "Data Governance",
+                "Health Intelligence Analytics",
+                "Evidence-based Policy Systems",
+                "Real-world Data & Outcomes Research",
+                "Healthcare Resource Optimization",
               ].map((item, idx) => (
                 <div
                   key={idx}
@@ -330,7 +352,7 @@ export default function HERACHomepageDemo() {
                   </h3>
 
                   <p className="mt-5 leading-8 text-gray-600">
-                    Building next-generation healthcare intelligence systems through AI and advanced analytics.
+                    Supporting evidence-based reimbursement, healthcare policy and sustainable resource allocation.
                   </p>
                 </div>
               ))}
@@ -344,14 +366,16 @@ export default function HERACHomepageDemo() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-5">
             <div>
-              <img
-                src="/HERAC-logo.png"
-                alt="HERAC Logo"
-                className="h-20 w-auto object-contain brightness-200"
-              />
+              <div className="inline-flex rounded-2xl bg-white/5 px-4 py-3 backdrop-blur-sm">
+                <img
+                  src="/HERAC-logo.png"
+                  alt="HERAC Logo"
+                  className="h-24 w-auto object-contain brightness-[1.15] contrast-125"
+                />
+              </div>
 
               <p className="mt-6 leading-8 text-green-50/80">
-                Advancing health economics, HTA and AI-driven innovation for sustainable healthcare systems.
+                HERAC advances health economics, HTA, hospital management, health financing and evidence-informed healthcare policy for Vietnam and Southeast Asia.
               </p>
             </div>
 
@@ -363,7 +387,7 @@ export default function HERACHomepageDemo() {
               <div className="mt-5 space-y-4 text-green-50/80">
                 <div>About Us</div>
                 <div>Research</div>
-                <div>AI & Innovation</div>
+                <div>HTA & Health Financing</div>
                 <div>Education</div>
               </div>
             </div>
