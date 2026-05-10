@@ -1,4 +1,5 @@
 export default function HERACHomepageDemo() {
+  const logoUrl = "/HERAC-logo.png";
   const sections = [
     {
       title: "Health Economics & HTA",
@@ -38,15 +39,39 @@ export default function HERACHomepageDemo() {
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div>
-            <div className="text-2xl font-bold tracking-tight text-green-700">
-              HERAC
-            </div>
-            <div className="text-xs text-gray-500">
-              Health Economics Research and Assessment Center
+            <div className="flex items-center gap-4">
+              <img
+                src={logoUrl}
+                alt="HERAC Logo"
+                className="h-14 w-auto object-contain"
+              />
+
+              <div>
+                <div className="text-2xl font-bold tracking-tight text-green-700">
+                  HERAC
+                </div>
+
+                <div className="text-xs text-gray-500 leading-5">
+                  Health Economics Research and Assessment Center
+                  <br />
+                  Trung tâm Nghiên cứu và Đánh giá Kinh tế Y tế
+                </div>
+              </div>
             </div>
           </div>
 
-          <nav className="hidden gap-8 text-sm font-medium md:flex">
+          <div className="flex items-center gap-6">
+            <div className="hidden items-center rounded-full border border-gray-200 bg-white p-1 md:flex">
+              <button className="rounded-full bg-green-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition">
+                EN
+              </button>
+
+              <button className="rounded-full px-4 py-2 text-sm font-semibold text-gray-600 transition hover:text-green-700">
+                VI
+              </button>
+            </div>
+
+            <nav className="hidden gap-8 text-sm font-medium md:flex">
             <a href="#" className="hover:text-green-700">About</a>
             <a href="#" className="hover:text-green-700">Research</a>
             <a href="#" className="hover:text-green-700">AI & Digital Health</a>
@@ -54,6 +79,7 @@ export default function HERACHomepageDemo() {
             <a href="#" className="hover:text-green-700">Publications</a>
             <a href="#" className="hover:text-green-700">Partnerships</a>
           </nav>
+          </div>
 
           <button className="rounded-2xl bg-green-700 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-105">
             Contact HERAC
@@ -73,10 +99,16 @@ export default function HERACHomepageDemo() {
 
             <h1 className="max-w-2xl text-5xl font-bold leading-tight tracking-tight lg:text-6xl">
               Advancing Health Economics, HTA and AI-driven Healthcare Innovation
+              <span className="mt-4 block text-3xl font-semibold text-green-700 lg:text-4xl">
+                Thúc đẩy Kinh tế Y tế, HTA và Đổi mới Y tế dựa trên AI
+              </span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
               HERAC connects science, policy, education and artificial intelligence to support evidence-based healthcare systems and sustainable health innovation in Vietnam and Southeast Asia.
+              <br />
+              <br />
+              HERAC kết nối khoa học, chính sách, giáo dục và trí tuệ nhân tạo nhằm hỗ trợ hệ thống y tế dựa trên bằng chứng và đổi mới y tế bền vững tại Việt Nam và Đông Nam Á.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -288,7 +320,15 @@ export default function HERACHomepageDemo() {
       <footer className="border-t border-gray-100 bg-white py-14">
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
-            <div className="text-2xl font-bold text-green-700">HERAC</div>
+            <div className="flex items-center gap-4">
+              <img
+                src={logoUrl}
+                alt="HERAC Logo"
+                className="h-12 w-auto object-contain"
+              />
+
+              <div className="text-2xl font-bold text-green-700">HERAC</div>
+            </div>
 
             <p className="mt-5 leading-7 text-gray-600">
               HERAC is a science-driven platform advancing health economics, HTA, AI-driven healthcare innovation and evidence-based policy development.
@@ -336,6 +376,8 @@ export default function HERACHomepageDemo() {
 
         <div className="mx-auto mt-14 max-w-7xl border-t border-gray-100 px-6 pt-8 text-sm text-gray-500">
           💚 HERAC – Science | Integrity | Sustainability
+          <br />
+          💚 HERAC – Khoa Học | Trung Thực | Bền Vững
         </div>
       </footer>
     </div>
